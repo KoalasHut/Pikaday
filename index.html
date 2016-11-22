@@ -35,7 +35,12 @@
         firstDay: 1,
         minDate: new Date(),
         maxDate: new Date(2020, 12, 31),
-        yearRange: [2000,2020]
+        yearRange: [2000,2020],
+        templates: {
+            select: function(opts, label, classes, options){
+                return '<div class="pika-label">' + label + ' &darr;<select class="pika-select ' + classes + '" tabindex="-1">' + options + '</select></div>'
+            }
+        }
     });
 
     </script>
